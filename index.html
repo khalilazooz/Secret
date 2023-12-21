@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>💃🏻💃🏻💃🏻</title>
+    <style>
+		body {
+			display: flex;
+			height: 90vh;
+			background-color: #fee;
+            align-items: center;
+            justify-content: center;
+		}
+         #container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 60vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-image: url('https://images.template.net/96049/red-wedding-background-3efvv.jpg');
+            background-size: cover;
+            background-position: center;
+            color: #333; /* Set text color to white for better visibility on the background */
+			width:60%;
+			border: #333 solid 5px;
+        }
+
+        #result-container {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+	<div id="container">
+		<div id="result-container">
+			<h1 id="encrypted-info"></h1>
+			<p id="result"><span id="encrypted-info2"></span><strong id="result-value"></strong></p>
+		</div>
+	</div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Function to decrypt the encrypted text
+            function decryptText(encryptedText, key) {
+                let decryptedText = '';
+                for (let i = 0; i < encryptedText.length; i++) {
+                    decryptedText += String.fromCharCode(encryptedText.charCodeAt(i) ^ key.charCodeAt(i % key.length));
+                }
+                return decryptedText;
+            }
+
+            // Get the key from the URL
+            const urlParams = new URLSearchParams(window.location.search);
+            const key = urlParams.get('key');
+
+            // Encrypted text
+            const encryptedText = "7-#?)ky'8;-8h*1/ 1+o 2,01&9))+<𪃈𭞤𬓌𪮾𨣎𩞤";
+
+            // Decrypt the text
+            const decryptedText = decryptText(encryptedText, key);
+			
+			key2	= ""
+			for(let i = 0; i < 6; i++)
+				key2 	+=  String.fromCharCode(key.charCodeAt(i))
+            const decryptedText2 = decryptText("𭃜𬎴𪳆𭞤𬓌𪮾𭃜𬎴 $>%!?+../6s", key2);
+
+            // Display the decrypted text on the page
+            const encryptedInfoElement = document.getElementById("encrypted-info");
+            encryptedInfoElement.textContent = decryptedText;
+			
+			const encryptedInfoElement2 = document.getElementById("encrypted-info2");
+            encryptedInfoElement2.textContent = decryptedText2;
+
+			// Perform the equation calculation
+            const currentTime = new Date().getTime() / 1000;
+            const result = (1720472400 - currentTime) / (60 * 60 * 24);
+
+            // Display the result on the page
+            const resultElement = document.getElementById("result-value");
+            resultElement.textContent = result.toFixed(2); // Displaying the result with two decimal places
+        
+        });
+    </script>
+</body>
+</html>
