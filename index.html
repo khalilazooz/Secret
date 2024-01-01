@@ -30,6 +30,32 @@
         #result-container {
             text-align: center;
         }
+	    
+.card {
+  width: 300px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  border-bottom: 1px solid #ccc;
+}
+
+.card-content {
+  padding: 16px;
+}
+
+.card-content h3 {
+  margin: 0;
+}
+
+.card-content p {
+  margin: 8px 0;
+}
     </style>
 </head>
 <body>
@@ -40,6 +66,20 @@
 			<p><strong id="demo"></strong></p>
 		</div>
 	</div>
+	<div class="card">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIj86XLLZyPzLWZyj2RzXJ7sDA5pv6TfG3Xw&usqp=CAU" alt="Card Image">
+    <div class="card-content">
+      <h3>Card Title</h3>
+      <p>This is a description of the card.</p>
+    </div>
+	</div>
+	<div class="card">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7ofcgxJXSOE_q-KIkWFhIc6r4rC_9OWLG0g&usqp=CAU" alt="Card Image">
+    <div class="card-content">
+      <h3>Card Title</h3>
+      <p>This is a description of the card.</p>
+    </div>
+  </div>
 	<script>
 	        document.addEventListener("DOMContentLoaded", function() {
 	            // Function to decrypt the encrypted text
