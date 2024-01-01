@@ -11,6 +11,8 @@
 			background-color: #fee;
             align-items: center;
             justify-content: center;
+            flex-direction: column;
+
 		}
          #container {
             display: flex;
@@ -30,9 +32,11 @@
         #result-container {
             text-align: center;
         }
-	    
+.all{
+    display: flex;
+}    
 .card {
-  width: 75px;
+  width: 150px;
   border: 1px solid #ccc;
   border-radius: 2px;
   overflow: hidden;
@@ -64,22 +68,22 @@
 			<h1 id="encrypted-info"></h1>
 			<p id="result"><span id="encrypted-info2"></span><strong id="result-value"></strong></p>
 			<p><strong id="demo"></strong></p>
-		
-		<br/>
-		<div class="card">
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIj86XLLZyPzLWZyj2RzXJ7sDA5pv6TfG3Xw&usqp=CAU" alt="Card Image">
-    <div class="card-content">
-      <h3>How long ?</h3>
+	    </div>
+	</div>
+    <div class="all">
+    <div class="card" style="margin-right: 20px;">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIj86XLLZyPzLWZyj2RzXJ7sDA5pv6TfG3Xw&usqp=CAU" alt="Card Image">
+        <div class="card-content">
+          <h3>How long ?</h3>
+        </div>
     </div>
-	</div>
-	<div class="card">
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7ofcgxJXSOE_q-KIkWFhIc6r4rC_9OWLG0g&usqp=CAU" alt="Card Image">
-    <div class="card-content">
-      <h3>Forever</h3>
+    <div class="card" style="margin-left: 20px;">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7ofcgxJXSOE_q-KIkWFhIc6r4rC_9OWLG0g&usqp=CAU" alt="Card Image">
+        <div class="card-content">
+          <h3>Forever</h3>
+        </div>
     </div>
-	</div>
-	</div>
-	</div>
+    </div>
 	<script>
 	        document.addEventListener("DOMContentLoaded", function() {
 	            // Function to decrypt the encrypted text
